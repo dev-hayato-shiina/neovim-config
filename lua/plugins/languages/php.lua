@@ -17,12 +17,24 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        intelephense = { enabled = true },
+        intelephense = {
+          enabled = true,
+          settings = {
+            intelephense = {
+              files = {
+                exclude = { "**/.git/**", "**/vendor/**", "**/node_modules/**" },
+              },
+            },
+          },
+        },
         laravel_ls = { enabled = true },
         stimulus_ls = { enabled = true },
         html = { enabled = true },
         ts_ls = { enabled = true },
         cssls = { enabled = true },
+      },
+      diagnostics = {
+        update_in_insert = false,
       },
     },
   },
