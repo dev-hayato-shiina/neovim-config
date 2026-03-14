@@ -22,7 +22,7 @@ return {
           settings = {
             intelephense = {
               files = {
-                exclude = { "**/.git/**", "**/vendor/**", "**/node_modules/**" },
+                exclude = { "**/.git/**", "**/node_modules/**" },
               },
             },
           },
